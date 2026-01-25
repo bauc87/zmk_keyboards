@@ -46,7 +46,7 @@
    &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6       &kp N7   &kp N8     &kp N9    &kp N0 &kp BSPC
    &kp TAB    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3     &bt BT_SEL 4 &trans   &kp UP     &trans    &trans &kp LG(LS(NUMBER_4))
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans       &kp LEFT &kp DOWN   &kp RIGHT &trans &kp RET
-                                    &kp LCMD     &trans       &kp SPACE      &mt RCTRL SPACE  &mo ADJUST   &kp RALT
+                                    &kp LCMD     &trans       &kp SPACE      &mt RCTRL SPACE  &trans    &kp RALT
                         >;
                 };
 
@@ -63,18 +63,5 @@
                              &kp LCMD &trans   &kp SPACE     &mt RCTRL SPACE   &trans    &kp RALT
                         >;
                 };
-                adjust_layer {
-// -----------------------------------------------------------------------------------------
-// |  ESC | &trans  |  RGB SPEED +          |  RGB SPEED -  |  RGB HUI +  |  RGB HUD - |   |  backlight ON/OFF  |  backlight bright +  |  backlight birht -  |  backlight cycle  |    | BSPC |
-// | RGB ON/OFF  |  RGB SAT +  |  RGB SAT -            |  RGB BRI +    |  RGB BRI -  | RGB VERDE  |   |  BRIGHT SET 10  |  BRIGHT SET 25  |  BRIGHT SET 50  |  BRIGHT SET 75  |  BRIGHT SET 100  |     |
-// | SHFT |  RGB CYLCES |  RGB CYCLES REVERSE   |  RGB AZUL     |  RGB BLANCO |            |   |    |    |    |    |  |    |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                         bindings = <
-   &kp ESC  &trans  &rgb_ug RGB_SPI &rgb_ug RGB_SPD                           &rgb_ug RGB_HUI                     &rgb_ug RGB_HUD                                     &bl BL_TOG    &bl BL_INC    &bl BL_DEC     &bl BL_CYCLE  &trans         &kp BSPC
-   &rgb_ug RGB_TOG  &rgb_ug RGB_SAI   &rgb_ug RGB_SAD &rgb_ug RGB_BRI                           &rgb_ug RGB_BRD                     &rgb_ug RGB_COLOR_HSB(128,100,100)                  &bl BL_SET 10 &bl BL_SET 25 &bl BL_SET 50  &bl BL_SET 75 &bl BL_SET 100 &trans
-   &kp LSHFT &rgb_ug RGB_EFF  &rgb_ug RGB_EFR &rgb_ug RGB_COLOR_HSB(0,0,255)            &rgb_ug RGB_COLOR_HSB(255,255,255)  &trans                                              &trans     &trans      &trans       &trans      &trans       &trans
-                              &kp LCMD &trans   &kp SPACE                     &mt RCTRL SPACE   &trans    &kp RALT
-                                                >;
-                                        };
         };
 };
